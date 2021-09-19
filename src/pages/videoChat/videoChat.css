@@ -1,0 +1,8 @@
+.video-chat{
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.video-chat.bg-primary{
+    background-color: #282c34;
+    color:white;
+}

@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import VideoChat from "./pages/videoChat";
+import Notifications from "./containers/notification";
+import Sidebar from "./containers/sideBar";
+// import ReactSample from "./pages/reactSample";
+import { ContextProvider } from "./utils/context";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ContextProvider>
+        <VideoChat />
+        <Sidebar>
+          <Notifications />
+        </Sidebar>
+        {/* <ReactSample /> */}
+      </ContextProvider>
     </div>
   );
 }
